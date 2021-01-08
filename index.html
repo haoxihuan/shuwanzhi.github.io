@@ -484,67 +484,7 @@
     
 </div>
 
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
 
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
-
-        function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
-    });
-</script>
 
 
 
@@ -699,7 +639,7 @@ title: 微信公众号：一再羊鱼丝
   
   <header>
     
-                      <i class="far fa-comments fa-fw" aria-hidden="true"></i><span class="name">最新评论</span>
+  <i class="far fa-comments fa-fw" aria-hidden="true"></i><span class="name">最新评论</span>
     
   </header>
                             
@@ -763,63 +703,7 @@ title: 微信公众号：一再羊鱼丝
 
 
 
-	window.onload = function(){
-    //获取画布对象
-    var canvas = document.getElementById("code_rain_canvas");
-    //获取画布的上下文
-    var context =canvas.getContext("2d");
-    var s = window.screen;
-    var W = canvas.width = s.width;
-    var H = canvas.height;
-    //获取浏览器屏幕的宽度和高度
-    //var W = window.innerWidth;
-    //var H = window.innerHeight;
-    //设置canvas的宽度和高度
-    canvas.width = W;
-    canvas.height = H;
-    //每个文字的字体大小
-    var fontSize = 12;
-    //计算列
-    var colunms = Math.floor(W /fontSize);	
-    //记录每列文字的y轴坐标
-    var drops = [];
-    //给每一个文字初始化一个起始点的位置
-    for(var i=0;i<colunms;i++){
-        drops.push(0);
-    }
-    //运动的文字
-    var str ="WELCOME TO WWW.ITRHX.COM";
-    //4:fillText(str,x,y);原理就是去更改y的坐标位置
-    //绘画的函数
-    function draw(){
-        context.fillStyle = "rgba(238,238,238,.08)";//遮盖层
-        context.fillRect(0,0,W,H);
-        //给字体设置样式
-        context.font = "600 "+fontSize+"px  Georgia";
-        //给字体添加颜色
-        context.fillStyle = ["#33B5E5", "#0099CC", "#AA66CC", "#9933CC", "#99CC00", "#669900", "#FFBB33", "#FF8800", "#FF4444", "#CC0000"][parseInt(Math.random() * 10)];//randColor();可以rgb,hsl, 标准色，十六进制颜色
-        //写入画布中
-        for(var i=0;i<colunms;i++){
-            var index = Math.floor(Math.random() * str.length);
-            var x = i*fontSize;
-            var y = drops[i] *fontSize;
-            context.fillText(str[index],x,y);
-            //如果要改变时间，肯定就是改变每次他的起点
-            if(y >= canvas.height && Math.random() > 0.99){
-                drops[i] = 0;
-            }
-            drops[i]++;
-        }
-    };
-    function randColor(){//随机颜色
-        var r = Math.floor(Math.random() * 256);
-        var g = Math.floor(Math.random() * 256);
-        var b = Math.floor(Math.random() * 256);
-        return "rgb("+r+","+g+","+b+")";
-    }
-    draw();
-    setInterval(draw,35);
-};
+	
 	    
 	    
 	    
@@ -948,7 +832,7 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
 本站支持：开往-友链接力  <a href="https://www.bytecho.net/" target="_blank">字节回声</a>
 <br>
              <a href="https://travellings.now.sh/" target="blank" title="开往-友链接力">  <img src="https://src.moshanghua.net/img/travellings.svg" alt="开往-友链接力" width="120" height="20"></a></div>
-            
+            <img src="https://7.dusays.com/2020/09/18/d3e9c15023e78.png">救回利网
             <span id="busuanzi_container_site_pv">
                 |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
                     class="white-color"></span>&nbsp;次
