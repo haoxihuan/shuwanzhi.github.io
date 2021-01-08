@@ -145,8 +145,6 @@
             
             ~~~微信公众号：一再羊鱼丝
             
-          
-            
         </div>
     </div>
 
@@ -234,7 +232,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://shuwanzhi.github.io" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -291,7 +289,7 @@
     }
 </style>
 
-<a href="https://shuwanzhi.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -376,10 +374,6 @@
                         loop: true,
                         backSpeed: 50,
                         showCursor: true
-			# 代码雨
-                       code_rain: true
-
-    
                     });
                 </script>
                 
@@ -403,19 +397,19 @@
                 </a>
 
                 
-                    <a href="https://shuwanzhi.github.io" class="waves-effect waves-light btn" target="_blank">
+                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
                         <i class="fab fa-github-alt"></i>Github
                     </a>
                 
             </div>
             <div class="cover-social-link">
-    <a href="https://shuwanzhi.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:392637221@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -425,7 +419,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=392637221" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 392637221" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -435,7 +429,7 @@
 
 
 
-    <a href="/Shuwanzhi.GitHub.io" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
 
@@ -446,7 +440,67 @@
     
 </div>
 
+<script>
+    $(function () {
+        let coverSlider = $('.carousel');
 
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
+
+        let carouselIntervalId;
+        
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
+
+        function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
+
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
+    });
+</script>
 
 
 
@@ -587,23 +641,6 @@ title: 微信公众号：一再羊鱼丝
 				date: 2021-01-06 22:23:48tags:  彭金涛
 
 
-
-
-  <div class="content article-entry">
-    
-      
-        <img src="https://raw.githubusercontent.com/shuwanzhi/shuwanzhi.github.io/gh-pages/docs/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4.jpg">小程序
-      
-    
-  </div>
-</section>
-<section class="widget text shadow desktop">
-  
-  <header>
-    
-  <i class="far fa-comments fa-fw" aria-hidden="true"></i><span class="name">最新评论</span>
-    
-  </header>
                             
                         </div>
                         <div class="publish-info">
@@ -625,25 +662,25 @@ title: 微信公众号：一再羊鱼丝
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/01/06/hello-world/">
+                    <a href="/2020/11/11/hello-world/">
                         <div class="card-image">
                             
                             
                             <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                             
-                            <span class="card-title">Hello Friends io</span>
+                            <span class="card-title">Hello friends</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Welcome to 微信公众号! Check 公众号 for more info. 
+                                Welcome to 微信公众号!  Check 公众号 for more info. 
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-11
                             </span>
                             <span class="publish-author">
                                 
@@ -665,18 +702,6 @@ title: 微信公众号：一再羊鱼丝
 
 
 
-	
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
 
     <footer class="page-footer bg-color">
     
@@ -712,9 +737,7 @@ title: 微信公众号：一再羊鱼丝
 </style>
 <div class="">
     
-<script type="text/javascript"
-color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-{% endif %}    <div class="row">
+    <div class="row">
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
                    type="playlist"
@@ -727,13 +750,7 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
                    preload='auto'
                    volume='0.7'
                    list-folded='true'
-		   search:
-  path: search.xml
-  field: post
-
-
-
-      
+        >
         </meting-js>
     </div>
 </div>
@@ -741,8 +758,7 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
 <script src="/libs/aplayer/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
-    
-    <!-- 又拍云的位置 以div为一个部分 -->
+     <!-- 又拍云的位置 以div为一个部分 -->
     <div class="col s12 m4 l4" align=center> <a href="https://www.upyun.com/" target="_blank"> <img
         src="../又拍云.png" width="100%" /></a>
 </div>
@@ -777,7 +793,7 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
               
             </span>
             <ul ref="slip">
-              ">
+              
                 <img :src="'https://gw.alicdn.com/tfs/TB1HxCbreL2gK0jSZPhXXahvXXa-65-70.gif' +item.url" alt="shuwanzhi.github.io" :class="checkId==index?'checkImg':''">
               </li>提供
 	   
