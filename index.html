@@ -49,6 +49,31 @@
             </div>
             
 
+		
+		
+<!--代码雨-->
+<% if (theme.code_rain){ %>
+      <!-- 数字雨 -->
+      <canvas id="code_rain_canvas" width="1440" height="900"></canvas>
+      <script type="text/javascript" src="/js/code_rain.js">
+        <style>
+            #code_rain_canvas {
+              position: fixed;
+              right: 0px;
+              bottom: 0px;
+              min-width: 100%;
+              min-height: 100%;
+              height: auto;
+              width: auto;
+              z-index: 4;
+            }
+        </style>
+    </script>
+<% } %>
+
+
+		
+
 
 <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
 <ul class="right nav-menu">
@@ -378,6 +403,10 @@
                         loop: true,
                         backSpeed: 50,
                         showCursor: true
+			# 代码雨
+                        code_rain: true
+
+    
                     });
                 </script>
                 
