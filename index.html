@@ -232,7 +232,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://shuwanzhi.github.io" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -289,7 +289,7 @@
     }
 </style>
 
-<a href="https://shuwanzhi.github.io/" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -301,12 +301,10 @@
 </a>
         
     </nav>
-class="full_page" id="page-header" style="background-image: url(https://img10.360buyimg.com/ddimg/jfs/t1/115728/37/13274/609366/5f195089E443772ae/05089c24ead30598.jpg)">
-	
-	
-	</header>
 
-    背景
+</header>
+
+    
 <style>
     .carousel-control {
         width: 45px;
@@ -387,11 +385,7 @@ class="full_page" id="page-header" style="background-image: url(https://img10.36
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    // Custom styles.
-
-
-
-    var bannerUrl = "/medias/banner/" + new Date().getsecond() + '.jpg';
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
@@ -403,19 +397,19 @@ class="full_page" id="page-header" style="background-image: url(https://img10.36
                 </a>
 
                 
-                    <a href="https://shuwanzhi.github.io/" class="waves-effect waves-light btn" target="_blank">
+                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
                         <i class="fab fa-github-alt"></i>Github
                     </a>
                 
             </div>
             <div class="cover-social-link">
-    <a href="https://shuwanzhi.github.io/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:392637221@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -425,7 +419,7 @@ class="full_page" id="page-header" style="background-image: url(https://img10.36
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=392637221" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 392637221" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -447,15 +441,15 @@ class="full_page" id="page-header" style="background-image: url(https://img10.36
 </div>
 
 <script>
-   $(function () {
-       let coverSlider = $('.carousel');
+    $(function () {
+        let coverSlider = $('.carousel');
 
         //用户触摸轮播自动 restartPlay 是否生效
-       let initUserPressedOrDraggedActive = true
+        let initUserPressedOrDraggedActive = false
 
         //用户触摸轮播自动 restartPlay
-       function initUserPressedOrDragged(instance) {
-           setInterval(() => {
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
                 if (instance.pressed || instance.dragged) {
                     // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
                     restartPlay()
@@ -521,7 +515,7 @@ class="full_page" id="page-header" style="background-image: url(https://img10.36
                         <div class="dream">
     
     <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;楚希故里
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
     </div>
     
     <div class="row">
@@ -550,6 +544,9 @@ class="full_page" id="page-header" style="background-image: url(https://img10.36
         </div>
     </div>
     
+
+    
+
 
     
 
